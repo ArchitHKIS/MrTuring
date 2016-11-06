@@ -5,10 +5,8 @@ public static String revmes;
 
 
 public Enigma(){
-	final Map<Character, Integer> map;
 }
-public static void encrypt(String inputString){
-	String revmes = new StringBuilder(EnigmaTest.message).reverse().toString();
-
+public void encrypt(String revmes){
+	revmes = new StringBuffer(EnigmaTest.getMessage()).reverse().toString();
 }
 }
