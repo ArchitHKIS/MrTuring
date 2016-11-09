@@ -99,7 +99,6 @@ public class EnigmaTest {
 			tap.put('?', ' ');
 			for (final char d : pototo.toCharArray()) {
 				char dalues = tap.get(d);
-				System.out.println("test");
 				if (dalues == 0) {
 					// some sorta error
 				} else {
