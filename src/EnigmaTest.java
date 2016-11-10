@@ -10,6 +10,7 @@ public class EnigmaTest {
 		message = "glgl " + message + " glgl";
 		// System.out.println(message);
 		String revmes = new StringBuffer(EnigmaTest.getMessage()).reverse().toString();
+		revmes = revmes.toLowerCase();
 		System.out.println(revmes);
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
 		map = new HashMap<>();
@@ -59,7 +60,6 @@ public class EnigmaTest {
 		String weird = input.nextLine();
 		char[] charArray = weird.toCharArray();
 		String pototo = Arrays.toString(charArray);
-		String pototo1 = pototo.replace(",", "");
 		System.out.println(pototo);
 		System.out.println("Do you want me to decrypt this gibberish?");
 		String potato = input.nextLine();
@@ -94,14 +94,19 @@ public class EnigmaTest {
 			tap.put('>', 'z');
 			tap.put('?', ' ');
 			for (final char d : weird.toCharArray()) {
-				System.out.print(d);
+				//System.out.print(d);
 					Character dalues = tap.get(d);
-					// prints out int values from the revmes char array which is
-					// cool
-					//char dobo = dalues;
+					//exchanges the special characters with normal characters for final stuff. 
 					System.out.print(dalues);
 				
 			}
+		//now reverse the message
+		System.out.println("\nInput the text above again pls");
+		String close = input.nextLine();
+		close = close.replace("lglg","");
+		System.out.println(close);
+		String revmes2 = new StringBuffer(close).reverse().toString();
+		System.out.println(revmes2);
 		} else {
 			System.out.println("Whatcha doing with those numbers? Oh well");
 		}

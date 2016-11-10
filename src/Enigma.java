@@ -7,6 +7,6 @@ public static String revmes;
 public Enigma(){
 }
 public static void main(){
-	System.out.println(EnigmaTest.pototo);
+	//System.out.println(EnigmaTest.pototo);
 }
 }
