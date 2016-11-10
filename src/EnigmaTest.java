@@ -7,13 +7,13 @@ public class EnigmaTest {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Gimme some text to encrypt!");
 		message = input.nextLine();
-		message = "bobo "+message +" bobo";
-		//System.out.println(message);
+		message = "glgl " + message + " glgl";
+		// System.out.println(message);
 		String revmes = new StringBuffer(EnigmaTest.getMessage()).reverse().toString();
 		System.out.println(revmes);
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
 		map = new HashMap<>();
-		// this use hashmap method to map char a to int 1 and so on
+		// this use hashmap method to map char a to special characters such as ! and @ and so on
 		map.put('a', '!');
 		map.put('b', '@');
 		map.put('c', '#');
@@ -37,13 +37,10 @@ public class EnigmaTest {
 		map.put('u', ':');
 		map.put('v', '/');
 		map.put('w', '.');
-		map.put('x', ',');
+		map.put('x', 'ç');
 		map.put('y', '<');
 		map.put('z', '>');
 		map.put(' ', '?');
-		char[] numbers = new char[message.length()];
-		
-		int count = 0;
 		for (final char c : revmes.toCharArray()) {
 
 			char values = map.get(c);
@@ -52,20 +49,19 @@ public class EnigmaTest {
 				// some sorta error
 			} else {
 				// System.out.print(values + " ");
-				// prints out int values from the revmes char array which is cool
+				// prints out int values from the revmes char array which is
+				// cool
 				char bobo = values;
-				System.out.print(bobo);	
+				System.out.print(bobo);
 			}
-			}
+		}
 		System.out.println("\nInput the text above to decrypt!");
 		String weird = input.nextLine();
-		//String[] strArray = new String[] {weird};
-		//System.out.println("\n"+strArray[1]);
-		String[] s = weird.split("");
-		String pototo = Arrays.toString(s);
+		char[] charArray = weird.toCharArray();
+		String pototo = Arrays.toString(charArray);
+		String pototo1 = pototo.replace(",", "");
 		System.out.println(pototo);
-	
-	System.out.println("Does u want me to decrypt this gibberish?");
+		System.out.println("Do you want me to decrypt this gibberish?");
 		String potato = input.nextLine();
 		if (potato.equalsIgnoreCase("yes") || potato.equalsIgnoreCase("oui")) {
 			HashMap<Character, Character> tap = new HashMap<Character, Character>();
@@ -93,26 +89,23 @@ public class EnigmaTest {
 			tap.put(':', 'u');
 			tap.put('/', 'v');
 			tap.put('.', 'w');
-			tap.put(',', 'x');
+			tap.put('ç', 'x');
 			tap.put('<', 'y');
 			tap.put('>', 'z');
 			tap.put('?', ' ');
-			for (final char d : pototo.toCharArray()) {
-				char dalues = tap.get(d);
-				if (dalues == 0) {
-					// some sorta error
-				} else {
-					// System.out.print(values + " ");
-					// prints out int values from the revmes char array which is cool
-					char dobo = dalues;
-					System.out.println(dobo);	
-				}
-				}
-			System.out.println("This is a checker");
+			for (final char d : weird.toCharArray()) {
+				System.out.print(d);
+					Character dalues = tap.get(d);
+					// prints out int values from the revmes char array which is
+					// cool
+					//char dobo = dalues;
+					System.out.print(dalues);
+				
+			}
 		} else {
 			System.out.println("Whatcha doing with those numbers? Oh well");
 		}
-}
+	}
 
 	public static String getMessage() {
 		return EnigmaTest.message;
