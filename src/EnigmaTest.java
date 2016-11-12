@@ -25,18 +25,21 @@ public class EnigmaTest {
 			System.out.println("Type your encrypted text below");
 			String encrypted = input.nextLine();
 			int l = encrypted.length();
+			if(l == 0){
+				System.out.println("You didn't input any text. :P");
+			}else{
 			// finds length of the string that will be later used to remove the
 			// glgl part
 			encrypted = encrypted.substring(5, l-5);
 			// removes glgl from the encrypted part of the code
 			bobo.decryption(encrypted);
 			// decrypts the text using hashmaps,
-			System.out.println("\nType reversed text below");
+			System.out.println("\nType text below");
 			String reversed = input.nextLine();
 			reversed = bobo.reverse(reversed);
 			// using the same reversed method, it reverses the text.
 			System.out.println(reversed);
-		} else {
+		}}else {
 			System.out.println("Not decrypted text. Or is it?");
 			// if you say no or anything other than yes, oui, y then it is going
 			// to print this.
