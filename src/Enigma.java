@@ -14,7 +14,7 @@ public String reverse(String message){
 public void encrypt(String message){
 	HashMap<Character, Character> map = new HashMap<Character, Character>();
 	map = new HashMap<>();
-	// this use hashmap method to map char a to special characters such as ! and @ and so on
+	//this use hashmap method to map char a to special characters such as ! and @ and so on
 	map.put('a', '!');map.put('b', '@');
 	map.put('c', '#');map.put('d', '$');
 	map.put('e', '%');map.put('f', '^');
@@ -35,13 +35,11 @@ public void encrypt(String message){
 			//OH OH
 			// some sorta error
 		} else {
-			// System.out.print(values + " ");
 			// prints out special values from the revmes char array which is cool
 			char dobo = values;
 			System.out.print(dobo);
 		}	
 }	
-//bracket for this encryption method closes
 	}
 public String oui(){
 	return "You wanna decrypt this?";
@@ -65,7 +63,7 @@ public String oui(){
 	tap.put('<', 'y');tap.put('>', 'z');
 	tap.put('?', ' ');
 	for (final char d : message.toCharArray()) {
-		//for every element in weird as an array, it does this cool stuff.
+		//for every element in the string which will be converted as an array, it does this cool stuff.
 			Character dalues = tap.get(d);
 			//exchanges the special characters with normal characters for final stuff. 
 			System.out.print(dalues);	

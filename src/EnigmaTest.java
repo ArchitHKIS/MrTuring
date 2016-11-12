@@ -27,7 +27,7 @@ public class EnigmaTest {
 			int l = encrypted.length();
 			// finds length of the string that will be later used to remove the
 			// glgl part
-			encrypted = encrypted.substring(5, l - 5);
+			encrypted = encrypted.substring(5, l-5);
 			// removes glgl from the encrypted part of the code
 			bobo.decryption(encrypted);
 			// decrypts the text using hashmaps,
@@ -41,7 +41,5 @@ public class EnigmaTest {
 			// if you say no or anything other than yes, oui, y then it is going
 			// to print this.
 		}
-
-		// main method ending parenthesis
 	}
 }
