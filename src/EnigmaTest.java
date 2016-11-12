@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class EnigmaTest {
 	public static void main(String args[]) {
 		Enigma bobo = new Enigma();
