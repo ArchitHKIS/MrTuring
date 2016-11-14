@@ -24,11 +24,11 @@ public class EnigmaTest {
 			System.out.println("Type your encrypted text below");
 			String encrypted = input.nextLine();
 			int l = encrypted.length();
+			// finds length of the string that will be later used to remove the
+			// glgl part
 			if(l == 0){
 				System.out.println("You didn't input any text. :P");
 			}else{
-			// finds length of the string that will be later used to remove the
-			// glgl part
 			encrypted = encrypted.substring(5, l-5);
 			// removes glgl from the encrypted part of the code
 			bobo.decryption(encrypted);
